@@ -1,0 +1,15 @@
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\bin\Debug\ProjectCheetos.exe.config
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\bin\Debug\ProjectCheetos.exe
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\bin\Debug\ProjectCheetos.pdb
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csprojAssemblyReference.cache
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\MainWindow.g.cs
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\App.g.cs
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos_MarkupCompile.cache
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos_MarkupCompile.lref
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\MainWindow.baml
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.g.resources
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.Properties.Resources.resources
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csproj.GenerateResource.cache
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csproj.CoreCompileInputs.cache
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.exe
+C:\Users\riadz\source\repos\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.pdb
