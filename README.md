@@ -1,2 +1,4 @@
-# ProjectCheetos
-An IDE for the programming language Python
+# Project Cheetos
+
+A very powerfull Python IDE
+Made in C#
