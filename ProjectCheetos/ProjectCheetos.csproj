@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Screenshot 2021-04-09 175847.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cheetos-united-states-chester-cheetah-cheese-puffs-fritos-united-cheetos-png-900_500.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
