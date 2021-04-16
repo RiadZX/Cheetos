@@ -11,7 +11,7 @@
     </Window.Background>
     
     <Grid>
-        <TextBox x:Name="TextField" Margin="10,23,10,10"></TextBox>
+        <TextBox x:Name="TextField" Margin="10,23,10,10" Background="#FF1C1C1C" BorderBrush="#FF1C1C1C" Foreground="White" AcceptsTab="True" AcceptsReturn="True"></TextBox>
         <DockPanel >
             
             <Menu DockPanel.Dock="Top" Background="#FF333333" Foreground="White" BorderBrush="#FF333333" >
