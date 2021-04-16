@@ -1,6 +1,7 @@
 # Project Cheetos
 
-A very powerfull Python IDE
+A text editor and programming editor.
+Mainly for python
 
 
 
