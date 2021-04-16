@@ -21,7 +21,7 @@
 			</FlowDocument>
 		</RichTextBox>
 		<Menu Height="30" VerticalAlignment="Top" Background="#FFA2A2A2">
-			<Image Height="30" Width="30" Source="cheetos-united-states-chester-cheetah-cheese-puffs-fritos-united-cheetos-png-900_500.jpg"/>
+			<Image Height="30" Width="300" Source="cheetos-united-states-chester-cheetah-cheese-puffs-fritos-united-cheetos-png-900_500.jpg"/>
 		</Menu>
 	</Grid>
 </Window>
