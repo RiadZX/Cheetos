@@ -17,6 +17,7 @@ using System.IO;
 
 
 
+
 namespace ProjectCheetos
 {
    
@@ -25,6 +26,7 @@ namespace ProjectCheetos
     /// </summary>
     public partial class MainWindow : Window
     {
+        string openedfile;
            
         public MainWindow()
         {
@@ -68,6 +70,20 @@ namespace ProjectCheetos
             openFileDialog.Filter = "Python file (*.py)|*.py|Text files (*.txt)|*.txt|All files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
                 TextField.Text = File.ReadAllText(openFileDialog.FileName);
+                openedfile =  openFileDialog.FileName;
+                this.Title = System.IO.Path.GetFileName(openedfile) + " | Cheetos IDE";
+               //Console.WriteLine(openedfile);
+        }
+
+        private void Run(object sender, RoutedEventArgs e)
+        {
+            System.Diagnostics.Process.Start(openedfile);
+            
+        }
+
+        private void Save(object sender, RoutedEventArgs e)
+        {
+            File.WriteAllText(openedfile, TextField.Text);
         }
     }
 }

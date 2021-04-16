@@ -18,9 +18,11 @@
 
                 <MenuItem Header="_File" Background="#FF333333" Foreground="White" BorderBrush="#FF333333" >
                     <MenuItem Header="_Open" Click="MenuItem_Open" Background="#FF333333" BorderBrush="#FF333333"/>
-                    <MenuItem Header="_Close" Background="#FF333333" BorderBrush="#FF333333"/>
+                    <MenuItem Header="_Save" Background="#FF333333" BorderBrush="#FF333333" Click="Save"/>
                     <MenuItem Header="_Save As" Click="MenuItem_SaveAs" Background="#FF333333" BorderBrush="#FF333333"/>
+
                 </MenuItem>
+                <MenuItem Header="Run" Click="Run"/>
             </Menu>
             <StackPanel/>
         </DockPanel>
