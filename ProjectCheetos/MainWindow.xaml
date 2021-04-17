@@ -11,11 +11,9 @@
     </Window.Background>
 
     <Grid>
-        <RichTextBox x:Name="TextField" HorizontalAlignment="Left" Height="386" Margin="10,23,0,0" VerticalAlignment="Top" Width="772" Background="#FF1C1C1C" SelectionBrush="#FFE8FF00" Foreground="White" FontSize="14" FontFamily="Consolas, 'Courier New', monospace" BorderBrush="#FFC5FF00">
+        <RichTextBox x:Name="TextField" HorizontalAlignment="Left" Height="386" Margin="10,23,0,0" VerticalAlignment="Top" Width="772" Background="#FF1C1C1C" SelectionBrush="#FF4FABF7" Foreground="White" FontSize="14" FontFamily="Consolas, 'Courier New', monospace" BorderBrush="#FFC5FF00" TextChanged="TextField_TextChanged">
             <FlowDocument>
-                <Paragraph>
-                    <Run Text="RichTextBox"/>
-                </Paragraph>
+                <Paragraph/>
             </FlowDocument>
             <RichTextBox.Resources>
                 <Style TargetType="{x:Type Paragraph}">
@@ -36,8 +34,8 @@
 
                 </MenuItem>
                 <MenuItem Header="_Tools" Background="#FF333333" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" >
-                    <MenuItem Header="Encrypt"  Background="#FF333333" BorderBrush="#FF333333"/>
-                    <MenuItem Header="Decrypt" Background="#FF333333" BorderBrush="#FF333333" />
+                    <MenuItem Header="Encrypt"  Click="EncryptButton" Background="#FF333333" BorderBrush="#FF333333" />
+                    <MenuItem Header="Decrypt"  Click="DecryptButton" Background="#FF333333" BorderBrush="#FF333333" />
                     <MenuItem Header="Yeet"  Background="#FF333333" BorderBrush="#FF333333"/>
 
                 </MenuItem>
