@@ -43,3 +43,6 @@ C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectC
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csproj.CoreCompileInputs.cache
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.exe
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.pdb
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\Rabbit.Controls.dll
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\Xceed.Wpf.AvalonDock.dll
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csproj.CopyComplete

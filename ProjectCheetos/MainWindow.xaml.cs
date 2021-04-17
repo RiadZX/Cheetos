@@ -36,6 +36,9 @@ namespace ProjectCheetos
         public MainWindow()
         {
             InitializeComponent();
+            DriveInfo[] drives = DriveInfo.GetDrives();
+            foreach (DriveInfo driveInfo in drives)
+                trvStructure.Items.Add(CreateTreeItem(driveInfo));
         }
 
 
@@ -109,45 +112,45 @@ namespace ProjectCheetos
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-            
-            public static string Encrypt(string plainText, string passPhrase)
+
+        public static string Encrypt(string plainText, string passPhrase)
+        {
+            // Salt and IV is randomly generated each time, but is preprended to encrypted cipher text
+            // so that the same Salt and IV values can be used when decrypting.  
+            var saltStringBytes = Generate256BitsOfRandomEntropy();
+            var ivStringBytes = Generate256BitsOfRandomEntropy();
+            var plainTextBytes = Encoding.UTF8.GetBytes(plainText);
+            using (var password = new Rfc2898DeriveBytes(passPhrase, saltStringBytes, DerivationIterations))
             {
-                // Salt and IV is randomly generated each time, but is preprended to encrypted cipher text
-                // so that the same Salt and IV values can be used when decrypting.  
-                var saltStringBytes = Generate256BitsOfRandomEntropy();
-                var ivStringBytes = Generate256BitsOfRandomEntropy();
-                var plainTextBytes = Encoding.UTF8.GetBytes(plainText);
-                using (var password = new Rfc2898DeriveBytes(passPhrase, saltStringBytes, DerivationIterations))
+                var keyBytes = password.GetBytes(Keysize / 8);
+                using (var symmetricKey = new RijndaelManaged())
                 {
-                    var keyBytes = password.GetBytes(Keysize / 8);
-                    using (var symmetricKey = new RijndaelManaged())
+                    symmetricKey.BlockSize = 256;
+                    symmetricKey.Mode = CipherMode.CBC;
+                    symmetricKey.Padding = PaddingMode.PKCS7;
+                    using (var encryptor = symmetricKey.CreateEncryptor(keyBytes, ivStringBytes))
                     {
-                        symmetricKey.BlockSize = 256;
-                        symmetricKey.Mode = CipherMode.CBC;
-                        symmetricKey.Padding = PaddingMode.PKCS7;
-                        using (var encryptor = symmetricKey.CreateEncryptor(keyBytes, ivStringBytes))
+                        using (var memoryStream = new MemoryStream())
                         {
-                            using (var memoryStream = new MemoryStream())
+                            using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
                             {
-                                using (var cryptoStream = new CryptoStream(memoryStream, encryptor, CryptoStreamMode.Write))
-                                {
-                                    cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
-                                    cryptoStream.FlushFinalBlock();
-                                    // Create the final bytes as a concatenation of the random salt bytes, the random iv bytes and the cipher bytes.
-                                    var cipherTextBytes = saltStringBytes;
-                                    cipherTextBytes = cipherTextBytes.Concat(ivStringBytes).ToArray();
-                                    cipherTextBytes = cipherTextBytes.Concat(memoryStream.ToArray()).ToArray();
-                                    memoryStream.Close();
-                                    cryptoStream.Close();
-                                    return Convert.ToBase64String(cipherTextBytes);
-                                }
+                                cryptoStream.Write(plainTextBytes, 0, plainTextBytes.Length);
+                                cryptoStream.FlushFinalBlock();
+                                // Create the final bytes as a concatenation of the random salt bytes, the random iv bytes and the cipher bytes.
+                                var cipherTextBytes = saltStringBytes;
+                                cipherTextBytes = cipherTextBytes.Concat(ivStringBytes).ToArray();
+                                cipherTextBytes = cipherTextBytes.Concat(memoryStream.ToArray()).ToArray();
+                                memoryStream.Close();
+                                cryptoStream.Close();
+                                return Convert.ToBase64String(cipherTextBytes);
                             }
                         }
                     }
                 }
             }
+        }
 
-        
+
         public static string Decrypt(string cipherText, string passPhrase)
         {
             // Get the complete stream of bytes that represent:
@@ -185,7 +188,7 @@ namespace ProjectCheetos
                 }
             }
         }
-        
+
         private static byte[] Generate256BitsOfRandomEntropy()
         {
             var randomBytes = new byte[32]; // 32 Bytes will give us 256 bits.
@@ -199,12 +202,12 @@ namespace ProjectCheetos
 
         private void EncryptButton(object sender, RoutedEventArgs e)
         {
-            string encryptedtext =  Encrypt(TextField.Selection.Text, "chongoslol");
+            string encryptedtext = Encrypt(TextField.Selection.Text, "chongoslol");
             TextField.Selection.Text = encryptedtext;
         }
         private void DecryptButton(object sender, RoutedEventArgs e)
         {
-            string decryptedtext  = Decrypt(TextField.Selection.Text, "chongoslol");
+            string decryptedtext = Decrypt(TextField.Selection.Text, "chongoslol");
             TextField.Selection.Text = decryptedtext;
         }
 
@@ -247,9 +250,46 @@ namespace ProjectCheetos
                 pointer = pointer.GetNextContextPosition(LogicalDirection.Forward);
             }
         }
-        
+
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //tree viewer
+        
+
+        public void TreeViewItem_Expanded(object sender, RoutedEventArgs e)
+        {
+            TreeViewItem item = e.Source as TreeViewItem;
+            item.Foreground = Brushes.White;
+            if ((item.Items.Count == 1) && (item.Items[0] is string))
+            {
+                item.Items.Clear();
+
+                DirectoryInfo expandedDir = null;
+                if (item.Tag is DriveInfo)
+                    expandedDir = (item.Tag as DriveInfo).RootDirectory;
+                if (item.Tag is DirectoryInfo)
+                    expandedDir = (item.Tag as DirectoryInfo);
+                try
+                {
+                    foreach (DirectoryInfo subDir in expandedDir.GetDirectories())
+                        item.Items.Add(CreateTreeItem(subDir));
+                        item.Foreground = Brushes.White;
+                }
+                catch { }
+            }
+        }
+        
+        private TreeViewItem CreateTreeItem(object o)
+        {
+            TreeViewItem item = new TreeViewItem();
+            item.Foreground = Brushes.White;
+            item.Header = o.ToString();
+            item.Tag = o;
+            item.Items.Add("Loading...");
+            return item;
+        }
+
+        
 
     }
 }
