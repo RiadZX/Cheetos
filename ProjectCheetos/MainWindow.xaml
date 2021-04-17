@@ -5,26 +5,49 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ProjectCheetos"
         mc:Ignorable="d"
-        Title="Project Cheetos" Height="450" Width="800" Icon="cheetos-united-states-chester-cheetah-cheese-puffs-fritos-united-cheetos-png-900_500.jpg" HorizontalAlignment="Center" VerticalAlignment="Center">
+        Title="Project Cheetos" Height="450" Width="800" Icon="cheetos-united-states-chester-cheetah-cheese-puffs-fritos-united-cheetos-png-900_500.jpg" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFF3FF00">
     <Window.Background>
         <SolidColorBrush Color="#FF333333"/>
     </Window.Background>
-    
-    <Grid>
-        <TextBox x:Name="TextField" Margin="10,23,10,10" Background="#FF1C1C1C" BorderBrush="#FF1C1C1C" Foreground="White" AcceptsTab="True" AcceptsReturn="True"></TextBox>
-        <DockPanel >
-            
-            <Menu DockPanel.Dock="Top" Background="#FF333333" Foreground="White" BorderBrush="#FF333333" >
 
-                <MenuItem Header="_File" Background="#FF333333" Foreground="White" BorderBrush="#FF333333" >
+    <Grid>
+        <RichTextBox x:Name="TextField" HorizontalAlignment="Left" Height="386" Margin="10,23,0,0" VerticalAlignment="Top" Width="772" Background="#FF1C1C1C" SelectionBrush="#FFE8FF00" Foreground="White" FontSize="14" FontFamily="Consolas, 'Courier New', monospace" BorderBrush="#FFC5FF00">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+            <RichTextBox.Resources>
+                <Style TargetType="{x:Type Paragraph}">
+                    <Setter Property="Margin" Value="0"/>
+                </Style>
+            </RichTextBox.Resources>
+        </RichTextBox>
+
+
+        <DockPanel Grid.Row="1">
+
+            <Menu DockPanel.Dock="Top" Background="#FF333333" Foreground="White" BorderBrush="#FFDCFF00" >
+
+                <MenuItem Header="_File" Background="#FF333333" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" >
                     <MenuItem Header="_Open" Click="MenuItem_Open" Background="#FF333333" BorderBrush="#FF333333"/>
                     <MenuItem Header="_Save" Background="#FF333333" BorderBrush="#FF333333" Click="Save"/>
                     <MenuItem Header="_Save As" Click="MenuItem_SaveAs" Background="#FF333333" BorderBrush="#FF333333"/>
 
                 </MenuItem>
-                <MenuItem Header="Run" Click="Run"/>
+                <MenuItem Header="_Tools" Background="#FF333333" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" >
+                    <MenuItem Header="Encrypt"  Background="#FF333333" BorderBrush="#FF333333"/>
+                    <MenuItem Header="Decrypt" Background="#FF333333" BorderBrush="#FF333333" />
+                    <MenuItem Header="Yeet"  Background="#FF333333" BorderBrush="#FF333333"/>
+
+                </MenuItem>
+                <MenuItem Header="Run" Click="Run" Margin="0" Padding="10,0" Background="{x:Null}" />
             </Menu>
-            <StackPanel/>
+            <StackPanel>
+                
+            </StackPanel>
         </DockPanel>
+
+
     </Grid>
 </Window>

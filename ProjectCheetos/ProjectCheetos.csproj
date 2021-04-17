@@ -100,5 +100,8 @@
   <ItemGroup>
     <Resource Include="cheetos-united-states-chester-cheetah-cheese-puffs-fritos-united-cheetos-png-900_500.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="arrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

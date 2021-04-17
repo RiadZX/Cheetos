@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Microsoft.Win32;
 using System.IO;
+using System.Security.Cryptography;
 
 
 
@@ -26,28 +27,23 @@ namespace ProjectCheetos
     /// </summary>
     public partial class MainWindow : Window
     {
-        string openedfile;
+        string openedfile = "none";
            
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-        }
+        
 
         private void MenuItem_SaveAs(object sender, RoutedEventArgs e)
         {
             SaveFileDialog saveFileDialog = new SaveFileDialog();
             saveFileDialog.Filter = "Python file (*.py)|*.py|Text file (*.txt)|*.txt";
             if (saveFileDialog.ShowDialog() == true)
-                File.WriteAllText(saveFileDialog.FileName, TextField.Text);
+                File.WriteAllText(saveFileDialog.FileName, StringFromRichTextBox(TextField));
+                openedfile = saveFileDialog.FileName;
+                this.Title = System.IO.Path.GetFileName(openedfile) + " | Cheetos IDE";
         }
 
         string StringFromRichTextBox(RichTextBox rtb)
@@ -69,7 +65,8 @@ namespace ProjectCheetos
             OpenFileDialog openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "Python file (*.py)|*.py|Text files (*.txt)|*.txt|All files (*.*)|*.*";
             if (openFileDialog.ShowDialog() == true)
-                TextField.Text = File.ReadAllText(openFileDialog.FileName);
+                TextField.Document.Blocks.Clear();
+                TextField.AppendText(File.ReadAllText(openFileDialog.FileName));
                 openedfile =  openFileDialog.FileName;
                 this.Title = System.IO.Path.GetFileName(openedfile) + " | Cheetos IDE";
                //Console.WriteLine(openedfile);
@@ -77,13 +74,34 @@ namespace ProjectCheetos
 
         private void Run(object sender, RoutedEventArgs e)
         {
-            System.Diagnostics.Process.Start(openedfile);
+            if (openedfile == "none")
+            {
+                MessageBox.Show("Please save the file first");
+            }
+            else
+            {
+                System.Diagnostics.Process.Start(openedfile);
+            }
+            
             
         }
 
         private void Save(object sender, RoutedEventArgs e)
         {
-            File.WriteAllText(openedfile, TextField.Text);
+            if (openedfile == "none")
+            {
+                SaveFileDialog saveFileDialog = new SaveFileDialog();
+                saveFileDialog.Filter = "Python file (*.py)|*.py|Text file (*.txt)|*.txt";
+                if (saveFileDialog.ShowDialog() == true)
+                    File.WriteAllText(saveFileDialog.FileName, StringFromRichTextBox(TextField));
+                openedfile = saveFileDialog.FileName;
+                this.Title = System.IO.Path.GetFileName(openedfile) + " | Cheetos IDE";
+            }
+            else
+            {
+                File.WriteAllText(openedfile, StringFromRichTextBox(TextField));
+            }
+           
         }
     }
 }
