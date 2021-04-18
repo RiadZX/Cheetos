@@ -34,12 +34,17 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ProjectCheetos.App</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="Rabbit.Controls">
       <HintPath>..\..\..\..\Downloads\demo\demo\Rabbit.Controls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -52,6 +57,7 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WindowsFormsIntegration" />
     <Reference Include="Xceed.Wpf.AvalonDock">
       <HintPath>..\..\..\..\Downloads\ScintillaNET.WPF-master\ScintillaNET.WPF-master\Libraries\Xceed.Wpf.AvalonDock.dll</HintPath>
     </Reference>
@@ -101,13 +107,11 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Screenshot 2021-04-09 175847.jpg" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="cheetos-united-states-chester-cheetah-cheese-puffs-fritos-united-cheetos-png-900_500.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="arrow.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

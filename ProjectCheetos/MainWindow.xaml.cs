@@ -16,6 +16,7 @@ using Microsoft.Win32;
 using System.IO;
 using System.Security.Cryptography;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace ProjectCheetos
 {
@@ -25,10 +26,14 @@ namespace ProjectCheetos
     /// </summary>
     public partial class MainWindow : Window
     {
+
+        
         string openedfile = "none";
         // This constant is used to determine the keysize of the encryption algorithm in bits.
         // We divide this by 8 within the code below to get the equivalent number of bytes.
         private const int Keysize = 256;
+
+        
 
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
@@ -39,8 +44,10 @@ namespace ProjectCheetos
             DriveInfo[] drives = DriveInfo.GetDrives();
             foreach (DriveInfo driveInfo in drives)
                 trvStructure.Items.Add(CreateTreeItem(driveInfo));
+            
         }
 
+        
 
 
         private void MenuItem_SaveAs(object sender, RoutedEventArgs e)
@@ -81,17 +88,19 @@ namespace ProjectCheetos
 
         private void Run(object sender, RoutedEventArgs e)
         {
+
             if (openedfile == "none")
             {
                 MessageBox.Show("Please save the file first");
             }
             else
             {
-                System.Diagnostics.Process.Start(openedfile);
+                Process.Start(openedfile);
             }
 
-
         }
+
+
 
         private void Save(object sender, RoutedEventArgs e)
         {
@@ -109,9 +118,10 @@ namespace ProjectCheetos
                 File.WriteAllText(openedfile, StringFromRichTextBox(TextField));
             }
 
+
         }
 
-        ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
         public static string Encrypt(string plainText, string passPhrase)
         {
@@ -149,8 +159,6 @@ namespace ProjectCheetos
                 }
             }
         }
-
-
         public static string Decrypt(string cipherText, string passPhrase)
         {
             // Get the complete stream of bytes that represent:
@@ -188,7 +196,6 @@ namespace ProjectCheetos
                 }
             }
         }
-
         private static byte[] Generate256BitsOfRandomEntropy()
         {
             var randomBytes = new byte[32]; // 32 Bytes will give us 256 bits.
@@ -199,7 +206,6 @@ namespace ProjectCheetos
             }
             return randomBytes;
         }
-
         private void EncryptButton(object sender, RoutedEventArgs e)
         {
             string encryptedtext = Encrypt(TextField.Selection.Text, "chongoslol");
@@ -211,21 +217,35 @@ namespace ProjectCheetos
             TextField.Selection.Text = decryptedtext;
         }
 
+        // Create a List using Range    
+        string[] pythonkw = { "False","class","from","or","None","continue","global","pass","True","def","if","raise","and","del","import","return","as","elif","in","try","assert","else","is","while","async","except","lambda","with","await","finally","nonlocal","yield","break","for","not","(", ")"};
+        string[] htmlkw = { "Cow", "Camel", "Elephant" };
+        string[] csskw = { "Cow", "Camel", "Elephant" };
+        string[] jskw = { "Cow", "Camel", "Elephant" };
+
         private void TextField_TextChanged(object sender, TextChangedEventArgs e)
         {
+            List<string> python = new List<string>(pythonkw);
+            List<string> html = new List<string>(htmlkw);
+            List<string> css = new List<string>(csskw);
+            List<string> js = new List<string>(jskw);
             IEnumerable<TextRange> wordRanges = GetAllWordRanges(TextField.Document);
             foreach (TextRange wordRange in wordRanges)
             {
-                if (wordRange.Text == "import" || wordRange.Text == "print" || wordRange.Text == ")" || wordRange.Text == "(")
+                if (python.Contains(wordRange.Text))
                 {
                     wordRange.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Lime);
                 }
                 else
                 {
+                    Console.WriteLine(wordRange.ToString());
                     wordRange.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.White);
                 }
             }
         }
+
+
+
 
         public static IEnumerable<TextRange> GetAllWordRanges(FlowDocument document)
         {
@@ -289,6 +309,8 @@ namespace ProjectCheetos
             return item;
         }
 
+        //////ColorSyntax
+        
         
 
     }
