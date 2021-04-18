@@ -27,13 +27,13 @@ namespace ProjectCheetos
     public partial class MainWindow : Window
     {
 
-        
+
         string openedfile = "none";
         // This constant is used to determine the keysize of the encryption algorithm in bits.
         // We divide this by 8 within the code below to get the equivalent number of bytes.
         private const int Keysize = 256;
 
-        
+
 
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
@@ -41,13 +41,13 @@ namespace ProjectCheetos
         public MainWindow()
         {
             InitializeComponent();
-            DriveInfo[] drives = DriveInfo.GetDrives();
-            foreach (DriveInfo driveInfo in drives)
-                trvStructure.Items.Add(CreateTreeItem(driveInfo));
-            
+            //DriveInfo[] drives = DriveInfo.GetDrives();
+            //foreach (DriveInfo driveInfo in drives)
+            //    trvStructure.Items.Add(CreateTreeItem(driveInfo));
+
         }
 
-        
+
 
 
         private void MenuItem_SaveAs(object sender, RoutedEventArgs e)
@@ -217,101 +217,122 @@ namespace ProjectCheetos
             TextField.Selection.Text = decryptedtext;
         }
 
+        //SYNTAX HIGHLIGHTING
+
+        //string[] python_keywords = { "False", "class", "from", "or", "None", "continue", "global", "pass", "True", "def", "if", "raise", "and", "del", "import", "return", "as", "elif", "in", "try", "assert", "else", "is", "while", "async", "except", "lambda", "with", "await", "finally", "nonlocal", "yield", "break", "for", "not" , "print"};
+        //string[] python_operators = { "=", "==", "!=", "<", "<=", ">", ">=", "+", "-", "*", "/", "//", "%", "**", "+=", "-=", "*=", "/=", "%=", "^", "|", "&", "~", ">>", "<<" };
+        //string[] python_braces = { "{", "}", "(", ")", "[", "]" };
+
+
         // Create a List using Range    
-        string[] pythonkw = { "False","class","from","or","None","continue","global","pass","True","def","if","raise","and","del","import","return","as","elif","in","try","assert","else","is","while","async","except","lambda","with","await","finally","nonlocal","yield","break","for","not","(", ")"};
-        string[] htmlkw = { "Cow", "Camel", "Elephant" };
-        string[] csskw = { "Cow", "Camel", "Elephant" };
-        string[] jskw = { "Cow", "Camel", "Elephant" };
+        // string[] pythonkw = { "False","class","from","or","None","continue","global","pass","True","def","if","raise","and","del","import","return","as","elif","in","try","assert","else","is","while","async","except","lambda","with","await","finally","nonlocal","yield","break","for","not","(", ")"};
+        // string[] htmlkw = { "Cow", "Camel", "Elephant" };
+        // string[] csskw = { "Cow", "Camel", "Elephant" };
+        // string[] jskw = { "Cow", "Camel", "Elephant" };
 
         private void TextField_TextChanged(object sender, TextChangedEventArgs e)
         {
-            List<string> python = new List<string>(pythonkw);
-            List<string> html = new List<string>(htmlkw);
-            List<string> css = new List<string>(csskw);
-            List<string> js = new List<string>(jskw);
-            IEnumerable<TextRange> wordRanges = GetAllWordRanges(TextField.Document);
-            foreach (TextRange wordRange in wordRanges)
-            {
-                if (python.Contains(wordRange.Text))
-                {
-                    wordRange.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Lime);
-                }
-                else
-                {
-                    Console.WriteLine(wordRange.ToString());
-                    wordRange.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.White);
-                }
-            }
+
+            //List<string> python_keywordList = new List<string>(python_keywords);
+            //List<string> python_operatorsList = new List<string>(python_operators);
+            //List<string> python_bracesList = new List<string>(python_braces);
+            //IEnumerable<TextRange> wordRanges = GetAllWordRanges(TextField.Document);
+            //foreach (TextRange wordRange in wordRanges)
+            //{
+            //    if (python_keywordList.Contains(wordRange.Text))
+            //    {
+            //        wordRange.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Lime);
+            //        Console.WriteLine("Keyword" + wordRange.ToString());
+            //    }
+            //    else if (python_operatorsList.Contains(wordRange.Text))
+            //    {
+            //        wordRange.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Pink);
+            //        Console.WriteLine("Operator" + wordRange.ToString());
+            //    }
+            //    else if (python_bracesList.Contains(wordRange.Text))
+            //    {
+            //        wordRange.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.Blue);
+            //        Console.WriteLine("Braces" + wordRange.ToString());
+            //    }
+            //    else
+            //    {
+            //        Console.WriteLine("White" + wordRange.ToString());
+            //        wordRange.ApplyPropertyValue(TextElement.ForegroundProperty, Brushes.White);
+            //    }
+            //}
         }
 
+        
 
 
 
-        public static IEnumerable<TextRange> GetAllWordRanges(FlowDocument document)
-        {
-            string pattern = @"[^\W\d](\w|[-']{1,2}(?=\w))*";
-            TextPointer pointer = document.ContentStart;
-            while (pointer != null)
-            {
-                if (pointer.GetPointerContext(LogicalDirection.Forward) == TextPointerContext.Text)
-                {
-                    string textRun = pointer.GetTextInRun(LogicalDirection.Forward);
-                    MatchCollection matches = Regex.Matches(textRun, pattern);
-                    foreach (Match match in matches)
-                    {
-                        int startIndex = match.Index;
-                        int length = match.Length;
-                        TextPointer start = pointer.GetPositionAtOffset(startIndex);
-                        TextPointer end = start.GetPositionAtOffset(length);
-                        yield return new TextRange(start, end);
-                    }
-                }
 
-                pointer = pointer.GetNextContextPosition(LogicalDirection.Forward);
-            }
-        }
+        //public static IEnumerable<TextRange> GetAllWordRanges(FlowDocument document)
+        //{
+        //    string pattern = @"[^\W\d](\w|[-']{1,2}(?=\w))*";
+        //    TextPointer pointer = document.ContentStart;
+        //    while (pointer != null)
+        //    {
+        //        if (pointer.GetPointerContext(LogicalDirection.Forward) == TextPointerContext.Text)
+        //        {
+        //            string textRun = pointer.GetTextInRun(LogicalDirection.Forward);
+        //            MatchCollection matches = Regex.Matches(textRun, pattern);
+        //            foreach (Match match in matches)
+        //            {
+        //                int startIndex = match.Index;
+        //                int length = match.Length;
+        //                TextPointer start = pointer.GetPositionAtOffset(startIndex);
+        //                TextPointer end = start.GetPositionAtOffset(length);
+        //                yield return new TextRange(start, end);
+        //                Console.WriteLine(new TextRange(start, end).Text);
+        //            }
+        //        }
+
+        //        pointer = pointer.GetNextContextPosition(LogicalDirection.Forward);
+        //    }
+        //}
 
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         //tree viewer
-        
 
-        public void TreeViewItem_Expanded(object sender, RoutedEventArgs e)
-        {
-            TreeViewItem item = e.Source as TreeViewItem;
-            item.Foreground = Brushes.White;
-            if ((item.Items.Count == 1) && (item.Items[0] is string))
-            {
-                item.Items.Clear();
 
-                DirectoryInfo expandedDir = null;
-                if (item.Tag is DriveInfo)
-                    expandedDir = (item.Tag as DriveInfo).RootDirectory;
-                if (item.Tag is DirectoryInfo)
-                    expandedDir = (item.Tag as DirectoryInfo);
-                try
-                {
-                    foreach (DirectoryInfo subDir in expandedDir.GetDirectories())
-                        item.Items.Add(CreateTreeItem(subDir));
-                        item.Foreground = Brushes.White;
-                }
-                catch { }
-            }
-        }
-        
-        private TreeViewItem CreateTreeItem(object o)
-        {
-            TreeViewItem item = new TreeViewItem();
-            item.Foreground = Brushes.White;
-            item.Header = o.ToString();
-            item.Tag = o;
-            item.Items.Add("Loading...");
-            return item;
-        }
+        //public void TreeViewItem_Expanded(object sender, RoutedEventArgs e)
+        //{
+        //    TreeViewItem item = e.Source as TreeViewItem;
+        //    item.Foreground = Brushes.White;
+        //    if ((item.Items.Count == 1) && (item.Items[0] is string))
+        //    {
+        //        item.Items.Clear();
+
+        //        DirectoryInfo expandedDir = null;
+        //        if (item.Tag is DriveInfo)
+        //            expandedDir = (item.Tag as DriveInfo).RootDirectory;
+        //        if (item.Tag is DirectoryInfo)
+        //            expandedDir = (item.Tag as DirectoryInfo);
+        //        try
+        //        {
+        //            foreach (DirectoryInfo subDir in expandedDir.GetDirectories())
+        //                item.Items.Add(CreateTreeItem(subDir));
+        //            item.Foreground = Brushes.White;
+        //        }
+        //        catch { }
+        //    }
+        //}
+
+        //private TreeViewItem CreateTreeItem(object o)
+        //{
+        //    TreeViewItem item = new TreeViewItem();
+        //    item.Foreground = Brushes.White;
+        //    item.Header = o.ToString();
+        //    item.Tag = o;
+        //    item.Items.Add("Loading...");
+        //    return item;
+        //}
 
         //////ColorSyntax
-        
-        
+
+
 
     }
 }
