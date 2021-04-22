@@ -1,66 +1,93 @@
 ﻿<Window
+        
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:ui="http://schemas.modernwpf.com/2019"
+	    xmlns:scintilla="clr-namespace:ScintillaNET;assembly=ScintillaNET"
         ui:WindowHelper.UseModernWindowStyle="True"
         xmlns:local="clr-namespace:ProjectCheetos"
         xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock" x:Class="ProjectCheetos.MainWindow"
         mc:Ignorable="d"
-        Title="Project Cheetos" Height="450" Width="800" Icon="Layer-09-WF.png" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FFFFDC00">
+        Title="Project Cheetos" Height="588.775" Width="890" Icon="Resources/logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF00FF51" Background="#FF3F3F46">
+    <Window.CommandBindings>
+        <CommandBinding Command="Save"
+            CanExecute="Save_CanExecute"
+            Executed="Save_Executed" />
+        <CommandBinding Command="Open"
+            CanExecute="Open_CanExecute"
+            Executed="Open_Executed" />
+        <CommandBinding Command="SaveAs"
+            CanExecute="SaveAs_CanExecute"
+            Executed="SaveAs_Executed" />
+        
+    </Window.CommandBindings>
+    <Window.InputBindings>
+        <KeyBinding Gesture="Ctrl+Shift+S" Command="SaveAs" />
+        <KeyBinding Gesture="Ctrl+S" Command="Save" />
+        <KeyBinding Gesture="Ctrl+O" Command="Open" />
+        
+    </Window.InputBindings>
 
 
 
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="425*"/>
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <!--<ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="15*"/>-->
         </Grid.ColumnDefinitions>
 
-        <RichTextBox Grid.Column="0" x:Name="TextField" Margin="0,40,0,0" Background="#FF1C1C1C" SelectionBrush="#FFB0B0B0" Foreground="White" FontSize="14" FontFamily="Consolas, 'Courier New', monospace" BorderBrush="#FF1C1C1C" TextChanged="TextField_TextChanged" AcceptsTab="True" VerticalScrollBarVisibility="Auto" IsDocumentEnabled="True">
-            <RichTextBox.Resources>
-                <Style TargetType="{x:Type Paragraph}">
-                    <Setter Property="Margin" Value="0"/>
-                </Style>
-            </RichTextBox.Resources>
-            <FlowDocument>
-                <Paragraph/>
-            </FlowDocument>
-        </RichTextBox>
 
 
-        <!--<TreeView  Name="trvStructure" TreeViewItem.Expanded="TreeViewItem_Expanded" Margin="10,21,0,10" Background="#FF1C1C1C" Foreground="White" Grid.Column="2" Grid.Row="1" BorderBrush="Yellow" />-->
-        <!--<GridSplitter Grid.Column="1"
-              HorizontalAlignment="Center"
-              VerticalAlignment="Stretch"
-              Background="#6b6b6b" 
-              ShowsPreview="True"
-              Width="5"
-              />-->
+        <DockPanel  Grid.Column="0" Grid.Row="0" Background="#FF1C1C1C" >
 
-        <DockPanel Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="0">
+            <Menu DockPanel.Dock="Top" Background="#FF2D2D30" Foreground="White" BorderBrush="#FFDCFF00" Height="50" >
 
-            <Menu DockPanel.Dock="Top" Background="#FF333333" Foreground="White" BorderBrush="#FFDCFF00" >
+                <MenuItem Header="_File" Background="#FF2D2D30" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" Height="46">
 
-                <MenuItem Header="_File" Background="#FF333333" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True">
-                  
-                    <MenuItem Header="_Open" Click="MenuItem_Open" Background="#FF333333" BorderBrush="#FF333333"/>
-                    <MenuItem Header="_Save" Background="#FF333333" BorderBrush="#FF333333" Click="Save"/>
-                    <MenuItem Header="_Save As" Click="MenuItem_SaveAs" Background="#FF333333" BorderBrush="#FF333333"/>
+                    <MenuItem Header="_Open" Click="MenuItem_Open" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+O" Command="Open"/>
+                    <Separator/>
+                    <MenuItem Header="_Save" Background="#FF333333" BorderBrush="#FF333333" Click="Save" InputGestureText="Ctrl+S" Command="Save"/>
+                    <MenuItem Header="_Save As" Click="MenuItem_SaveAs" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+Shift+S" Command="SaveAs"/>
 
                 </MenuItem>
-                <MenuItem Header="_Tools" Background="#FF333333" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" >
+                <MenuItem Header="_Edit" Background="#FF2D2D30" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" Height="46">
+                    <MenuItem Header="Undo"  Click="UndoButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+Z" />
+                    <MenuItem Header="Redo"  Click="RedoButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+Y"/>
+                    <Separator/>
+                    <MenuItem Header="Copy"  Click="CopyButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+C" />
+                    <MenuItem Header="Paste"  Click="PasteButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+V"/>
+                    <MenuItem Header="Cut"  Click="PasteButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+X"/>
+                    <MenuItem Header="Select All"  Click="SelectAllButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+A"/>
+
+                </MenuItem>
+                <MenuItem Header="_Tools" Background="#FF2D2D30" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" Height="48" >
                     <MenuItem Header="Encrypt"  Click="EncryptButton" Background="#FF333333" BorderBrush="#FF333333" />
                     <MenuItem Header="Decrypt"  Click="DecryptButton" Background="#FF333333" BorderBrush="#FF333333" />
-                    <MenuItem Header="Yeet"  Background="#FF333333" BorderBrush="#FF333333"/>
+                    
+                    
 
                 </MenuItem>
-                <MenuItem Header="Run" Click="Run" Margin="0" Padding="10,0" Background="{x:Null}" Foreground="White" />
+
+                <MenuItem Header="Run" Click="Run" Margin="0" Padding="10,0"  Foreground="LawnGreen" Height="50" Background="#FF2D2D30"/>
+
+                <MenuItem Header="Help" Margin="0" Padding="10,0"  Foreground="White" Height="50" Background="#FF2D2D30" >
+                    <MenuItem Header="Send Feedback"  Foreground="White"  Background="#FF2D2D30" Click="SendFeedbackButton"/>
+                    
+                </MenuItem>
             </Menu>
             <StackPanel/>
         </DockPanel>
+
+        <WindowsFormsHost Background="#FF2C2C2C" Margin="0,43,0,0" Grid.RowSpan="2">
+            <scintilla:Scintilla x:Name="scintilla" />
+        </WindowsFormsHost>
 
 
     </Grid>

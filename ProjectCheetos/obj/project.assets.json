@@ -14,6 +14,90 @@
           "lib/net45/ICSharpCode.AvalonEdit.dll": {}
         }
       },
+      "estebano.ScintillaNET.WPF/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "jacobslusser.ScintillaNET": "3.6.3"
+        },
+        "compile": {
+          "lib/net40/ScintillaNET.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ScintillaNET.WPF.dll": {}
+        }
+      },
+      "fernandreu.ScintillaNET/4.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net461/ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net461/ScintillaNET.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win-x64/native/License.txt": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/SciLexer.dll": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/SciLexer.exp": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/SciLexer.lib": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x64/native/version.txt": {
+            "assetType": "native",
+            "rid": "win-x64"
+          },
+          "runtimes/win-x86/native/License.txt": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/SciLexer.dll": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/SciLexer.exp": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/SciLexer.lib": {
+            "assetType": "native",
+            "rid": "win-x86"
+          },
+          "runtimes/win-x86/native/version.txt": {
+            "assetType": "native",
+            "rid": "win-x86"
+          }
+        }
+      },
+      "fernandreu.ScintillaNET.WPF/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "fernandreu.ScintillaNET": "4.0.4"
+        },
+        "compile": {
+          "lib/net461/ScintillaNET.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net461/ScintillaNET.WPF.dll": {}
+        }
+      },
+      "jacobslusser.ScintillaNET/3.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ScintillaNET.dll": {}
+        }
+      },
       "Microsoft.Windows.SDK.Contracts/10.0.18362.2005": {
         "type": "package",
         "dependencies": {
@@ -578,6 +662,48 @@
         },
         "runtime": {
           "lib/net45/ICSharpCode.AvalonEdit.dll": {}
+        }
+      },
+      "estebano.ScintillaNET.WPF/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "jacobslusser.ScintillaNET": "3.6.3"
+        },
+        "compile": {
+          "lib/net40/ScintillaNET.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ScintillaNET.WPF.dll": {}
+        }
+      },
+      "fernandreu.ScintillaNET/4.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net461/ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net461/ScintillaNET.dll": {}
+        }
+      },
+      "fernandreu.ScintillaNET.WPF/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "fernandreu.ScintillaNET": "4.0.4"
+        },
+        "compile": {
+          "lib/net461/ScintillaNET.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net461/ScintillaNET.WPF.dll": {}
+        }
+      },
+      "jacobslusser.ScintillaNET/3.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ScintillaNET.dll": {}
         }
       },
       "Microsoft.Windows.SDK.Contracts/10.0.18362.2005": {
@@ -1146,6 +1272,55 @@
           "lib/net45/ICSharpCode.AvalonEdit.dll": {}
         }
       },
+      "estebano.ScintillaNET.WPF/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "jacobslusser.ScintillaNET": "3.6.3"
+        },
+        "compile": {
+          "lib/net40/ScintillaNET.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ScintillaNET.WPF.dll": {}
+        }
+      },
+      "fernandreu.ScintillaNET/4.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net461/ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net461/ScintillaNET.dll": {}
+        },
+        "native": {
+          "runtimes/win-x64/native/License.txt": {},
+          "runtimes/win-x64/native/SciLexer.dll": {},
+          "runtimes/win-x64/native/SciLexer.exp": {},
+          "runtimes/win-x64/native/SciLexer.lib": {},
+          "runtimes/win-x64/native/version.txt": {}
+        }
+      },
+      "fernandreu.ScintillaNET.WPF/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "fernandreu.ScintillaNET": "4.0.4"
+        },
+        "compile": {
+          "lib/net461/ScintillaNET.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net461/ScintillaNET.WPF.dll": {}
+        }
+      },
+      "jacobslusser.ScintillaNET/3.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ScintillaNET.dll": {}
+        }
+      },
       "Microsoft.Windows.SDK.Contracts/10.0.18362.2005": {
         "type": "package",
         "dependencies": {
@@ -1710,6 +1885,55 @@
         },
         "runtime": {
           "lib/net45/ICSharpCode.AvalonEdit.dll": {}
+        }
+      },
+      "estebano.ScintillaNET.WPF/2.6.0": {
+        "type": "package",
+        "dependencies": {
+          "jacobslusser.ScintillaNET": "3.6.3"
+        },
+        "compile": {
+          "lib/net40/ScintillaNET.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ScintillaNET.WPF.dll": {}
+        }
+      },
+      "fernandreu.ScintillaNET/4.0.4": {
+        "type": "package",
+        "compile": {
+          "lib/net461/ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net461/ScintillaNET.dll": {}
+        },
+        "native": {
+          "runtimes/win-x86/native/License.txt": {},
+          "runtimes/win-x86/native/SciLexer.dll": {},
+          "runtimes/win-x86/native/SciLexer.exp": {},
+          "runtimes/win-x86/native/SciLexer.lib": {},
+          "runtimes/win-x86/native/version.txt": {}
+        }
+      },
+      "fernandreu.ScintillaNET.WPF/3.0.2": {
+        "type": "package",
+        "dependencies": {
+          "fernandreu.ScintillaNET": "4.0.4"
+        },
+        "compile": {
+          "lib/net461/ScintillaNET.WPF.dll": {}
+        },
+        "runtime": {
+          "lib/net461/ScintillaNET.WPF.dll": {}
+        }
+      },
+      "jacobslusser.ScintillaNET/3.6.3": {
+        "type": "package",
+        "compile": {
+          "lib/net40/ScintillaNET.dll": {}
+        },
+        "runtime": {
+          "lib/net40/ScintillaNET.dll": {}
         }
       },
       "Microsoft.Windows.SDK.Contracts/10.0.18362.2005": {
@@ -2283,6 +2507,74 @@
         "lib/net45/ICSharpCode.AvalonEdit.xml",
         "lib/netcoreapp3.0/ICSharpCode.AvalonEdit.dll",
         "lib/netcoreapp3.0/ICSharpCode.AvalonEdit.xml"
+      ]
+    },
+    "estebano.ScintillaNET.WPF/2.6.0": {
+      "sha512": "M0eg6ZACxfL74hgfizXT/eYUNHUs/ku8NY0eLj/QiG7m9UCqlA+MEe7yzxBai9ABZgHnp6+/pkRIRbgFlbvdgw==",
+      "type": "package",
+      "path": "estebano.scintillanet.wpf/2.6.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "estebano.scintillanet.wpf.2.6.0.nupkg.sha512",
+        "estebano.scintillanet.wpf.nuspec",
+        "lib/net40/ScintillaNET.WPF.dll",
+        "lib/net40/ScintillaNET.WPF.xml"
+      ]
+    },
+    "fernandreu.ScintillaNET/4.0.4": {
+      "sha512": "UpnuIthh+VQiPBGAkrwLe8t1oG+ciL0j1FlZlkCYJ6Hz0MHG6BJQCcVIGzOoecdpnYqUCnj6CrZWnYZNL9hmPg==",
+      "type": "package",
+      "path": "fernandreu.scintillanet/4.0.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "fernandreu.scintillanet.4.0.4.nupkg.sha512",
+        "fernandreu.scintillanet.nuspec",
+        "lib/net461/ScintillaNET.dll",
+        "lib/net461/ScintillaNET.xml",
+        "lib/netcoreapp3.1/ScintillaNET.dll",
+        "lib/netcoreapp3.1/ScintillaNET.xml",
+        "runtimes/win-x64/native/License.txt",
+        "runtimes/win-x64/native/SciLexer.dll",
+        "runtimes/win-x64/native/SciLexer.exp",
+        "runtimes/win-x64/native/SciLexer.lib",
+        "runtimes/win-x64/native/version.txt",
+        "runtimes/win-x86/native/License.txt",
+        "runtimes/win-x86/native/SciLexer.dll",
+        "runtimes/win-x86/native/SciLexer.exp",
+        "runtimes/win-x86/native/SciLexer.lib",
+        "runtimes/win-x86/native/version.txt"
+      ]
+    },
+    "fernandreu.ScintillaNET.WPF/3.0.2": {
+      "sha512": "L9eqTkAm98qZYyB7+mVEdFeJnii7jwaC8fu8C5Tpx3pQ5kfvuESzWJLFsMc4mPNi6amkjon90xmR2cRql6xD5g==",
+      "type": "package",
+      "path": "fernandreu.scintillanet.wpf/3.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "fernandreu.scintillanet.wpf.3.0.2.nupkg.sha512",
+        "fernandreu.scintillanet.wpf.nuspec",
+        "lib/net461/ScintillaNET.WPF.dll",
+        "lib/net461/ScintillaNET.WPF.xml",
+        "lib/netcoreapp3.1/ScintillaNET.WPF.dll",
+        "lib/netcoreapp3.1/ScintillaNET.WPF.xml"
+      ]
+    },
+    "jacobslusser.ScintillaNET/3.6.3": {
+      "sha512": "lERpP3K4x1ge5sW5eG+Yhv9sEFF4MDiHd/nuXTu/xSgPGODQo7K8hCEivqulrFypzFPZ+TsLDZoqucmi5blbdg==",
+      "type": "package",
+      "path": "jacobslusser.scintillanet/3.6.3",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "jacobslusser.scintillanet.3.6.3.nupkg.sha512",
+        "jacobslusser.scintillanet.nuspec",
+        "lib/net40/ScintillaNET.dll",
+        "lib/net40/ScintillaNET.xml"
       ]
     },
     "Microsoft.Windows.SDK.Contracts/10.0.18362.2005": {
@@ -3209,7 +3501,10 @@
   "projectFileDependencyGroups": {
     ".NETFramework,Version=v4.7.2": [
       "AvalonEdit >= 6.1.1",
-      "ModernWpfUI >= 0.9.4"
+      "ModernWpfUI >= 0.9.4",
+      "estebano.ScintillaNET.WPF >= 2.6.0",
+      "fernandreu.ScintillaNET.WPF >= 3.0.2",
+      "jacobslusser.ScintillaNET >= 3.6.3"
     ]
   },
   "packageFolders": {
@@ -3220,11 +3515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\ProjectCheetos.csproj",
+      "projectUniqueName": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\ProjectCheetos.csproj",
       "projectName": "ProjectCheetos",
-      "projectPath": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\ProjectCheetos.csproj",
+      "projectPath": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\ProjectCheetos.csproj",
       "packagesPath": "C:\\Users\\riadz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\obj\\",
+      "outputPath": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3260,6 +3555,18 @@
           "ModernWpfUI": {
             "target": "Package",
             "version": "[0.9.4, )"
+          },
+          "estebano.ScintillaNET.WPF": {
+            "target": "Package",
+            "version": "[2.6.0, )"
+          },
+          "fernandreu.ScintillaNET.WPF": {
+            "target": "Package",
+            "version": "[3.0.2, )"
+          },
+          "jacobslusser.ScintillaNET": {
+            "target": "Package",
+            "version": "[3.6.3, )"
           }
         }
       }

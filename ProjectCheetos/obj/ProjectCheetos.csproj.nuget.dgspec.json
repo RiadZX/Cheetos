@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\ProjectCheetos.csproj": {}
+    "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\ProjectCheetos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\ProjectCheetos.csproj": {
+    "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\ProjectCheetos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\ProjectCheetos.csproj",
+        "projectUniqueName": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\ProjectCheetos.csproj",
         "projectName": "ProjectCheetos",
-        "projectPath": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\ProjectCheetos.csproj",
+        "projectPath": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\ProjectCheetos.csproj",
         "packagesPath": "C:\\Users\\riadz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\obj\\",
+        "outputPath": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -47,6 +47,18 @@
             "ModernWpfUI": {
               "target": "Package",
               "version": "[0.9.4, )"
+            },
+            "estebano.ScintillaNET.WPF": {
+              "target": "Package",
+              "version": "[2.6.0, )"
+            },
+            "fernandreu.ScintillaNET.WPF": {
+              "target": "Package",
+              "version": "[3.0.2, )"
+            },
+            "jacobslusser.ScintillaNET": {
+              "target": "Package",
+              "version": "[3.6.3, )"
             }
           }
         }
