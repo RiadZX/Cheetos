@@ -1,4 +1,4 @@
-# Project Cheetos
+# ![Project Cheetos](https://github.com/RiadZX/ProjectCheetos/blob/main/logo.png) Project Cheetos
 
 ## A text editor and programming editor.
 
