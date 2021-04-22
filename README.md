@@ -1,5 +1,5 @@
 # Project Cheetos
-___
+
 ## A text editor and programming editor.
 
 **Features:**
