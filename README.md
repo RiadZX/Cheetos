@@ -1,9 +1,9 @@
 # Project Cheetos
+___
+## A text editor and programming editor.
 
-A text editor and programming editor.
 
-
-Releases
+[**Releases**](https://github.com/RiadZX/ProjectCheetos/releases)
 https://github.com/RiadZX/ProjectCheetos/releases
 
 
