@@ -9,6 +9,7 @@
   * Run scripts in the editor
   * Help button for support
   * Encrypt/Decrypt selected text
+  * And more coming soon
 
 **Screenshots**
 ![Screenshot of the editor](https://github.com/RiadZX/ProjectCheetos/blob/main/screenshot.png "Screenshot 1")
