@@ -10,11 +10,11 @@
   * Help button for support
   * Encrypt/Decrypt selected text
   * And more coming soon
-
+**[**Download the latest version**](https://github.com/RiadZX/ProjectCheetos/releases)**
 **Screenshots**
 ![Screenshot of the editor](https://github.com/RiadZX/ProjectCheetos/blob/main/screenshot.png "Screenshot 1")
 
-[**Releases**](https://github.com/RiadZX/ProjectCheetos/releases)
+
 
 
 
