@@ -3,7 +3,7 @@
 ## A text editor and programming editor.
 
 **Features:**
-  * Open and save files.\n
+  * Open and save files.
   * Undo/Redo 
   * Copy/Paste/Cut commands
   * Run scripts in the editor
