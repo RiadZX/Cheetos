@@ -1,6 +1,6 @@
 # ![Project Cheetos](https://github.com/RiadZX/ProjectCheetos/blob/main/logo.png) Project Cheetos
 
-## A text editor and programming editor.
+## A text- and programming editor.
 
 **Features:**
   * Open and save files.
