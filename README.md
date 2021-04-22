@@ -1,7 +1,7 @@
 # ![Project Cheetos](https://github.com/RiadZX/ProjectCheetos/blob/main/logo.png) Project Cheetos
 
 ## A text- and programming editor.
-
+**[**Download the latest version**](https://github.com/RiadZX/ProjectCheetos/releases)**
 **Features:**
   * Open and save files.
   * Undo/Redo 
@@ -10,7 +10,7 @@
   * Help button for support
   * Encrypt/Decrypt selected text
   * And more coming soon
-**[**Download the latest version**](https://github.com/RiadZX/ProjectCheetos/releases)**
+
 **Screenshots**
 ![Screenshot of the editor](https://github.com/RiadZX/ProjectCheetos/blob/main/screenshot.png "Screenshot 1")
 
