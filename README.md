@@ -4,7 +4,7 @@ ___
 
 
 [**Releases**](https://github.com/RiadZX/ProjectCheetos/releases)
-https://github.com/RiadZX/ProjectCheetos/releases
+
 
 
 
