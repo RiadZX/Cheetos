@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BZ1V7Z/vHldfuSzwAfe2SROmC2ICN0KW/Tr8KWN8k10LXd4sp9Lyra0yLTH0CrQUeh0szGb+xJP3f1wmvOeVdw==",
+  "dgSpecHash": "gC+2PoAdhXJ20m88FLcsaKGsVJ5/6jgtglHNgdPsWAC6cdBSu1FlyvTyorpKsR9+fUs/j+gsUbhWujjFOI+Z3A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\ProjectCheetos.csproj",
+  "projectFilePath": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\ProjectCheetos.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\riadz\\.nuget\\packages\\avalonedit\\6.1.1\\avalonedit.6.1.1.nupkg.sha512",
     "C:\\Users\\riadz\\.nuget\\packages\\estebano.scintillanet.wpf\\2.6.0\\estebano.scintillanet.wpf.2.6.0.nupkg.sha512",

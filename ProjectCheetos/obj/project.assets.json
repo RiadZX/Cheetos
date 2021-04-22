@@ -3515,11 +3515,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\ProjectCheetos.csproj",
+      "projectUniqueName": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\ProjectCheetos.csproj",
       "projectName": "ProjectCheetos",
-      "projectPath": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\ProjectCheetos.csproj",
+      "projectPath": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\ProjectCheetos.csproj",
       "packagesPath": "C:\\Users\\riadz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\riadz\\Downloads\\ProjectCheetos-main (1)\\ProjectCheetos-main\\ProjectCheetos\\obj\\",
+      "outputPath": "C:\\Users\\riadz\\Documents\\GitHub\\ProjectCheetos\\ProjectCheetos\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [

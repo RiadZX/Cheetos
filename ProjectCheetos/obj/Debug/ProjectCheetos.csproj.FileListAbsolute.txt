@@ -803,3 +803,6 @@ C:\Users\riadz\Downloads\ProjectCheetos-main (1)\ProjectCheetos-main\ProjectChee
 C:\Users\riadz\Downloads\ProjectCheetos-main (1)\ProjectCheetos-main\ProjectCheetos\obj\Debug\ProjectCheetos.csproj.CopyComplete
 C:\Users\riadz\Downloads\ProjectCheetos-main (1)\ProjectCheetos-main\ProjectCheetos\obj\Debug\ProjectCheetos.exe
 C:\Users\riadz\Downloads\ProjectCheetos-main (1)\ProjectCheetos-main\ProjectCheetos\obj\Debug\ProjectCheetos.pdb
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ScintillaNET.dll
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ScintillaNET.WPF.dll
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos_Content.g.cs
