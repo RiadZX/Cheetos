@@ -1,4 +1,4 @@
-# ![Project Cheetos](https://github.com/RiadZX/ProjectCheetos/blob/main/logo.png) Project Cheetos
+# ![Project Cheetos](https://github.com/RiadZX/ProjectCheetos/blob/main/logo.png) Bolt
 
 ## A text- and programming editor.
 ### [**Download the latest version**](https://github.com/RiadZX/ProjectCheetos/releases)<br>
