@@ -12,7 +12,8 @@
   * And more coming soon
 
 **Screenshots**
-![Screenshot of the editor](https://github.com/RiadZX/ProjectCheetos/blob/main/screenshot.png "Screenshot 1")
+![Screenshot of the editor](https://github.com/RiadZX/ProjectCheetos/blob/main/ProjectCheetos/Resources/screenshotdark1.png "Screenshot 1")
+![Screenshot of the editor](https://github.com/RiadZX/ProjectCheetos/blob/main/ProjectCheetos/Resources/screenshotlight1.png "Screenshot 2")
 
 
 
