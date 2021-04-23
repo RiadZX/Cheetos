@@ -200,6 +200,8 @@
     <Resource Include="Resources\Settings.png" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="Resources\screenshotdark1.png" />
+    <Resource Include="Resources\screenshotlight1.png" />
     <Resource Include="logo.ico" />
     <None Include="Resources\logopng.bmp" />
     <Resource Include="Resources\logo.ico" />
