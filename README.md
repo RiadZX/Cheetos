@@ -12,8 +12,8 @@
   * And more coming soon
 
 **Screenshots**
-![Screenshot of the editor](https://github.com/RiadZX/ProjectCheetos/blob/main/Quark/Resources/screenshotdark1.png "Screenshot 1")
-![Screenshot of the editor](https://github.com/RiadZX/ProjectCheetos/blob/main/Quark/Resources/screenshotlight1.png "Screenshot 2")
+![Screenshot of the editor](https://github.com/RiadZX/Quark/blob/main/ProjectCheetos/Resources/screenshotdark1.png "Screenshot 1")
+![Screenshot of the editor](https://github.com/RiadZX/Quark/blob/main/ProjectCheetos/Resources/screenshotlight1.png "Screenshot 2")
 
 
 
