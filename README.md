@@ -1,7 +1,7 @@
 # ![Project Cheetos](https://github.com/RiadZX/ProjectCheetos/blob/main/logo.png) Project Cheetos
 
 ## A text- and programming editor.
-####[**Download the latest version**](https://github.com/RiadZX/ProjectCheetos/releases)<br>
+### [**Download the latest version**](https://github.com/RiadZX/ProjectCheetos/releases)<br>
 **Features:**
   * Open and save files.
   * Undo/Redo 
