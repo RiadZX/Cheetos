@@ -47,10 +47,10 @@ namespace ProjectCheetos
             InitializeComponent();
             String[] args = App.Args;
             String[] argstest;
-            Console.WriteLine(args);
+            Console.WriteLine("args : ", args);
             try
             { // Open the text file using a stream reader.  
-                if (!App.NoArg)
+                if (args != null)
                 {
                     using (StreamReader sr = new StreamReader(args[0]))
                     {

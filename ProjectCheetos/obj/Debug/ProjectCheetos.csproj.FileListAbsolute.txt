@@ -28,21 +28,12 @@ C:\Users\laane\Desktop\Code\Python\IDE\ProjectCheetos\ProjectCheetos\obj\Debug\P
 C:\Users\laane\Desktop\Code\Python\IDE\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csproj.CoreCompileInputs.cache
 C:\Users\laane\Desktop\Code\Python\IDE\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.exe
 C:\Users\laane\Desktop\Code\Python\IDE\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.pdb
-C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ProjectCheetos.exe.config
-C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ProjectCheetos.exe
-C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ProjectCheetos.pdb
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csprojAssemblyReference.cache
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\MainWindow.g.cs
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\App.g.cs
-C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos_MarkupCompile.cache
-C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos_MarkupCompile.lref
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\MainWindow.baml
-C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.g.resources
-C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.Properties.Resources.resources
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csproj.GenerateResource.cache
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csproj.CoreCompileInputs.cache
-C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.exe
-C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.pdb
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\Rabbit.Controls.dll
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\Xceed.Wpf.AvalonDock.dll
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.csproj.CopyComplete
@@ -805,4 +796,13 @@ C:\Users\riadz\Downloads\ProjectCheetos-main (1)\ProjectCheetos-main\ProjectChee
 C:\Users\riadz\Downloads\ProjectCheetos-main (1)\ProjectCheetos-main\ProjectCheetos\obj\Debug\ProjectCheetos.pdb
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ScintillaNET.dll
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ScintillaNET.WPF.dll
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ProjectCheetos.exe.config
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ProjectCheetos.exe
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\bin\Debug\ProjectCheetos.pdb
 C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos_Content.g.cs
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos_MarkupCompile.cache
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos_MarkupCompile.lref
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.g.resources
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.Properties.Resources.resources
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.exe
+C:\Users\riadz\Documents\GitHub\ProjectCheetos\ProjectCheetos\obj\Debug\ProjectCheetos.pdb

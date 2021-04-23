@@ -10,7 +10,7 @@
         xmlns:local="clr-namespace:ProjectCheetos"
         xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock" x:Class="ProjectCheetos.MainWindow"
         mc:Ignorable="d"
-        Title="Project Cheetos" Height="588.775" Width="890" Icon="Resources/logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF00FF51" Background="#FF333334">
+        Title="Quark" Height="588.775" Width="890" Icon="Resources/logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF00FF51" Background="#FF333334">
 
     
     <Window.CommandBindings>
