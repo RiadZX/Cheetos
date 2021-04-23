@@ -10,7 +10,7 @@
         xmlns:local="clr-namespace:ProjectCheetos"
         xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock" x:Class="ProjectCheetos.MainWindow"
         mc:Ignorable="d"
-        Title="Project Cheetos" Height="588.775" Width="890" Icon="Resources/logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF00FF51" Background="#FF3F3F46">
+        Title="Project Cheetos" Height="588.775" Width="890" Icon="Resources/logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF00FF51" Background="#FF333334">
     <Window.CommandBindings>
         <CommandBinding Command="Save"
             CanExecute="Save_CanExecute"
@@ -21,13 +21,17 @@
         <CommandBinding Command="SaveAs"
             CanExecute="SaveAs_CanExecute"
             Executed="SaveAs_Executed" />
-        
+        <CommandBinding Command="Print"
+            CanExecute="Print_CanExecute"
+            Executed="Print_Executed" />
+
     </Window.CommandBindings>
     <Window.InputBindings>
         <KeyBinding Gesture="Ctrl+Shift+S" Command="SaveAs" />
         <KeyBinding Gesture="Ctrl+S" Command="Save" />
         <KeyBinding Gesture="Ctrl+O" Command="Open" />
-        
+        <KeyBinding Gesture="Ctrl+P" Command="Print" />
+
     </Window.InputBindings>
 
 
@@ -45,41 +49,43 @@
 
 
 
-        <DockPanel  Grid.Column="0" Grid.Row="0" Background="#FF1C1C1C" >
+        <DockPanel  Grid.Column="0" Grid.Row="0"  >
 
-            <Menu DockPanel.Dock="Top" Background="#FF2D2D30" Foreground="White" BorderBrush="#FFDCFF00" Height="50" >
+            <Menu DockPanel.Dock="Top"  Height="50" >
 
-                <MenuItem Header="_File" Background="#FF2D2D30" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" Height="46">
+                <MenuItem Header="_File"   Margin="0" Padding="10,0" UseLayoutRounding="True" Height="46">
 
-                    <MenuItem Header="_Open" Click="MenuItem_Open" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+O" Command="Open"/>
+                    <MenuItem Header="_Open"   InputGestureText="Ctrl+O" Command="Open"/>
                     <Separator/>
-                    <MenuItem Header="_Save" Background="#FF333333" BorderBrush="#FF333333" Click="Save" InputGestureText="Ctrl+S" Command="Save"/>
-                    <MenuItem Header="_Save As" Click="MenuItem_SaveAs" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+Shift+S" Command="SaveAs"/>
-
-                </MenuItem>
-                <MenuItem Header="_Edit" Background="#FF2D2D30" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" Height="46">
-                    <MenuItem Header="Undo"  Click="UndoButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+Z" />
-                    <MenuItem Header="Redo"  Click="RedoButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+Y"/>
+                    <MenuItem Header="_Save"    InputGestureText="Ctrl+S" Command="Save"/>
+                    <MenuItem Header="_Save As"   InputGestureText="Ctrl+Shift+S" Command="SaveAs"/>
                     <Separator/>
-                    <MenuItem Header="Copy"  Click="CopyButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+C" />
-                    <MenuItem Header="Paste"  Click="PasteButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+V"/>
-                    <MenuItem Header="Cut"  Click="PasteButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+X"/>
-                    <MenuItem Header="Select All"  Click="SelectAllButton" Background="#FF333333" BorderBrush="#FF333333" InputGestureText="Ctrl+A"/>
+                    <MenuItem Header="_Print"   InputGestureText="Ctrl+P" Command="Print"/>
 
                 </MenuItem>
-                <MenuItem Header="_Tools" Background="#FF2D2D30" Foreground="White" BorderBrush="#FF333333" Margin="0" Padding="10,0" UseLayoutRounding="True" Height="48" >
-                    <MenuItem Header="Encrypt"  Click="EncryptButton" Background="#FF333333" BorderBrush="#FF333333" />
-                    <MenuItem Header="Decrypt"  Click="DecryptButton" Background="#FF333333" BorderBrush="#FF333333" />
-                    
-                    
+                <MenuItem Header="_Edit"  Margin="0" Padding="10,0" UseLayoutRounding="True" Height="46">
+                    <MenuItem Header="Undo"  Click="UndoButton"  InputGestureText="Ctrl+Z" />
+                    <MenuItem Header="Redo"  Click="RedoButton"  InputGestureText="Ctrl+Y"/>
+                    <Separator/>
+                    <MenuItem Header="Copy"  Click="CopyButton"  InputGestureText="Ctrl+C" />
+                    <MenuItem Header="Paste"  Click="PasteButton"  InputGestureText="Ctrl+V"/>
+                    <MenuItem Header="Cut"  Click="PasteButton"  InputGestureText="Ctrl+X"/>
+                    <MenuItem Header="Select All"  Click="SelectAllButton"  InputGestureText="Ctrl+A"/>
+
+                </MenuItem>
+                <MenuItem Header="_Tools"  Margin="0" Padding="10,0" UseLayoutRounding="True" Height="48" >
+                    <MenuItem Header="Encrypt"  Click="EncryptButton"  />
+                    <MenuItem Header="Decrypt"  Click="DecryptButton"  />
+
+
 
                 </MenuItem>
 
-                <MenuItem Header="Run" Click="Run" Margin="0" Padding="10,0"  Foreground="LawnGreen" Height="50" Background="#FF2D2D30"/>
+                <MenuItem Header="Run" Click="Run" Margin="0" Padding="10,0" Height="50"  FontWeight="Bold" />
 
-                <MenuItem Header="Help" Margin="0" Padding="10,0"  Foreground="White" Height="50" Background="#FF2D2D30" >
-                    <MenuItem Header="Send Feedback"  Foreground="White"  Background="#FF2D2D30" Click="SendFeedbackButton"/>
-                    
+                <MenuItem Header="Help" Margin="0" Padding="10,0"   Height="50"  >
+                    <MenuItem Header="Send Feedback"   Click="SendFeedbackButton"/>
+
                 </MenuItem>
             </Menu>
             <StackPanel/>

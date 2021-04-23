@@ -10,6 +10,8 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
+using ModernWpf;
+using System.Windows.Documents;
 
 
 namespace ProjectCheetos
@@ -43,7 +45,29 @@ namespace ProjectCheetos
         public MainWindow()
         {
             InitializeComponent();
+            
+           
 
+            if(ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Dark)
+            {
+                DarkMode();
+                this.Foreground = Brushes.GhostWhite;
+                
+            }
+            else
+            {
+                LightMode();
+                this.Foreground = Brushes.Black;
+                this.Background = Brushes.GhostWhite;
+            }
+
+           
+            
+
+        }
+
+        private void DarkMode()
+        {
             scintilla.Styles[ScintillaNET.Style.Default].ForeColor = System.Drawing.Color.FromArgb(255, 230, 230, 225);
             scintilla.Styles[ScintillaNET.Style.Default].BackColor = System.Drawing.Color.FromArgb(255, 30, 30, 30);
             scintilla.Styles[ScintillaNET.Style.Default].Font = "Consolas";
@@ -60,10 +84,27 @@ namespace ProjectCheetos
             scintilla.ScrollWidthTracking = true;
 
             scintilla.CaretForeColor = System.Drawing.Color.FromArgb(255, 230, 230, 225);
-           
-            
-
         }
+        private void LightMode()
+        {
+            scintilla.Styles[ScintillaNET.Style.Default].ForeColor = System.Drawing.Color.FromArgb(255, 0, 0, 0);
+            scintilla.Styles[ScintillaNET.Style.Default].BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            scintilla.Styles[ScintillaNET.Style.Default].Font = "Consolas";
+            scintilla.Styles[ScintillaNET.Style.Default].Size = 14;
+            scintilla.StyleClearAll();
+
+
+
+            scintilla.Margins[0].Width = 35;
+            scintilla.Margins[0].Sensitive = true;
+
+            scintilla.Styles[ScintillaNET.Style.LineNumber].ForeColor = System.Drawing.Color.FromArgb(255, 43, 145, 175);
+            scintilla.Styles[ScintillaNET.Style.LineNumber].BackColor = System.Drawing.Color.FromArgb(255, 255, 255, 255);
+            scintilla.ScrollWidthTracking = true;
+
+            scintilla.CaretForeColor = System.Drawing.Color.FromArgb(255, 230, 230, 225);
+        }
+        
 
 
         private void Open_CanExecute(object sender, CanExecuteRoutedEventArgs e)
@@ -74,6 +115,21 @@ namespace ProjectCheetos
         private void Open_Executed(object sender, ExecutedRoutedEventArgs e)
         {
             MenuItem_Open(sender, e);
+        }
+
+        private void Print_CanExecute(object sender, CanExecuteRoutedEventArgs e)
+        {
+            e.CanExecute = true;
+        }
+
+        private void Print_Executed(object sender, ExecutedRoutedEventArgs e)
+        {
+            PrintDialog printDlg = new PrintDialog();
+            FlowDocument doc = new FlowDocument(new Paragraph(new Run(scintilla.Text)));
+
+            doc.Name = "FlowDoc";
+            IDocumentPaginatorSource idpSource = doc;
+            printDlg.PrintDocument(idpSource.DocumentPaginator, "Print text");
         }
         private void Save_CanExecute(object sender, CanExecuteRoutedEventArgs e)
         {
