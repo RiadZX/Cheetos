@@ -11,6 +11,8 @@
         xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock" x:Class="ProjectCheetos.MainWindow"
         mc:Ignorable="d"
         Title="Project Cheetos" Height="588.775" Width="890" Icon="Resources/logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF00FF51" Background="#FF333334">
+
+    
     <Window.CommandBindings>
         <CommandBinding Command="Save"
             CanExecute="Save_CanExecute"
@@ -24,17 +26,13 @@
         <CommandBinding Command="Print"
             CanExecute="Print_CanExecute"
             Executed="Print_Executed" />
-
     </Window.CommandBindings>
     <Window.InputBindings>
         <KeyBinding Gesture="Ctrl+Shift+S" Command="SaveAs" />
         <KeyBinding Gesture="Ctrl+S" Command="Save" />
         <KeyBinding Gesture="Ctrl+O" Command="Open" />
         <KeyBinding Gesture="Ctrl+P" Command="Print" />
-
     </Window.InputBindings>
-
-
 
     <Grid>
         <Grid.RowDefinitions>
@@ -46,8 +44,6 @@
             <!--<ColumnDefinition Width="Auto"/>
             <ColumnDefinition Width="15*"/>-->
         </Grid.ColumnDefinitions>
-
-
 
         <DockPanel  Grid.Column="0" Grid.Row="0"  >
 
@@ -76,8 +72,6 @@
                 <MenuItem Header="_Tools"  Margin="0" Padding="10,0" UseLayoutRounding="True" Height="48" >
                     <MenuItem Header="Encrypt"  Click="EncryptButton"  />
                     <MenuItem Header="Decrypt"  Click="DecryptButton"  />
-
-
 
                 </MenuItem>
 
