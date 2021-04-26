@@ -33,7 +33,7 @@ namespace ProjectCheetos
 
         // This constant determines the number of iterations for the password bytes generation function.
         private const int DerivationIterations = 1000;
-
+        SolidColorBrush greytheme = new SolidColorBrush(Color.FromArgb(255, 51, 51, 52));
 
 
         internal Color MediaColor(System.Drawing.Color color)
@@ -44,6 +44,7 @@ namespace ProjectCheetos
 
         public MainWindow()
         {
+            
             InitializeComponent();
             String[] args = App.Args;
             String[] argstest;
@@ -70,7 +71,7 @@ namespace ProjectCheetos
                 scintilla.AppendText("\n");
                 scintilla.AppendText(e.Message);
             }
-
+            ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
 
             if (ThemeManager.Current.ActualApplicationTheme == ApplicationTheme.Dark)
             {
@@ -84,7 +85,7 @@ namespace ProjectCheetos
                 this.Foreground = Brushes.Black;
                 this.Background = Brushes.GhostWhite;
             }
-
+            
 
            
             
@@ -109,6 +110,7 @@ namespace ProjectCheetos
             scintilla.ScrollWidthTracking = true;
 
             scintilla.CaretForeColor = System.Drawing.Color.FromArgb(255, 230, 230, 225);
+            scintilla.Focus();
         }
         private void LightMode()
         {
@@ -282,6 +284,37 @@ namespace ProjectCheetos
             }
 
         }
+        private void ThemeButton(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                if(ThemeManager.Current.ApplicationTheme == ApplicationTheme.Dark)
+                {
+                    LightMode();
+                    ThemeManager.Current.ApplicationTheme = ApplicationTheme.Light;
+                    this.Foreground = Brushes.Black;
+                    this.Background = Brushes.GhostWhite;
+                }
+                else if(ThemeManager.Current.ApplicationTheme == ApplicationTheme.Light)
+                {
+                    DarkMode();
+                    ThemeManager.Current.ApplicationTheme = ApplicationTheme.Dark;
+                    this.Foreground = Brushes.GhostWhite;
+                    this.Background = greytheme;
+                    
+                }
+
+            }
+            catch
+            {
+                MessageBox.Show("Change theme");
+            }
+            
+
+        }
+           
+
+       
 
 
 

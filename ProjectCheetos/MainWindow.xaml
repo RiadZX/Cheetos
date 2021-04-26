@@ -10,7 +10,7 @@
         xmlns:local="clr-namespace:ProjectCheetos"
         xmlns:xcad="http://schemas.xceed.com/wpf/xaml/avalondock" x:Class="ProjectCheetos.MainWindow"
         mc:Ignorable="d"
-        Title="Quark" Height="588.775" Width="890" Icon="Resources/logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF00FF51" Background="#FF333334">
+        Title="Quark" Height="588.775" Width="890" Icon="Resources/logo.ico" HorizontalAlignment="Center" VerticalAlignment="Center" BorderBrush="#FF686868" Background="#FF343433">
 
     
     <Window.CommandBindings>
@@ -65,8 +65,13 @@
                     <Separator/>
                     <MenuItem Header="Copy"  Click="CopyButton"  InputGestureText="Ctrl+C" />
                     <MenuItem Header="Paste"  Click="PasteButton"  InputGestureText="Ctrl+V"/>
-                    <MenuItem Header="Cut"  Click="PasteButton"  InputGestureText="Ctrl+X"/>
+                    <MenuItem Header="Cut"  Click="CutButton"  InputGestureText="Ctrl+X"/>
                     <MenuItem Header="Select All"  Click="SelectAllButton"  InputGestureText="Ctrl+A"/>
+
+                </MenuItem>
+                <MenuItem Header="_View"  Margin="0" Padding="10,0" UseLayoutRounding="True" Height="48" >
+                    <MenuItem Header="Toggle Theme"  Click="ThemeButton"/>
+                    
 
                 </MenuItem>
                 <MenuItem Header="_Tools"  Margin="0" Padding="10,0" UseLayoutRounding="True" Height="48" >
