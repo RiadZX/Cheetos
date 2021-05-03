@@ -1,4 +1,4 @@
-# ![Project Cheetos](https://github.com/RiadZX/ProjectCheetos/blob/main/logo.png) Quark
+# ![Project Cheetos](https://github.com/RiadZX/ProjectCheetos/blob/main/logo.png) Text Editor
 
 ## A text- and programming editor.
 ### [**Download the latest version**](https://github.com/RiadZX/Quark/releases)<br>
